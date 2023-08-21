@@ -1,0 +1,42 @@
+{
+  "name": "nextjscompressmetal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.6",
+    "@pbe/react-yandex-maps": "^1.2.4",
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "@vercel/analytics": "^1.0.1",
+    "autoprefixer": "10.4.14",
+    "class-variance-authority": "^0.6.1",
+    "clsx": "^1.2.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.7",
+    "framer-motion": "^10.13.0",
+    "keen-slider": "^6.8.6",
+    "lucide-react": "^0.259.0",
+    "next": "13.4.7",
+    "popmotion": "^11.0.5",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.2",
+    "swr": "^2.2.0",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "3.3.2",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "5.1.6"
+  }
+}
