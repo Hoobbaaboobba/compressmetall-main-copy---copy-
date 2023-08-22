@@ -73,9 +73,9 @@ const DynamicPage: React.FC<DynamicPageProps> = ({ category, id }) => {
             topic={`Запросить прайс`}
             description={"Оставьте ваши контакты и мы отправим Вам прайс"}
             placeHolder1={"Ваш номер телефона"}
-            placeHolder2={"Ваше имя / Ваша компания"}
-            firstType={"telephone"}
-            secondType={"name"}
+            placeHolder2={"Товар"}
+            firstType={"Номер телефона"}
+            secondType={"Товар"}
           />
           <div onClick={hideCall}>
             <CloseOutlinedIcon className="absolute top-2 right-2 text-gray-bg cursor-pointer" />

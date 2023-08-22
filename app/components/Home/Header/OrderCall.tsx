@@ -45,35 +45,37 @@ const OrderCall: React.FC<OrderCallProps> = ({
       >
         <div className="text-start">
           <input
+            required
             type="text"
-            {...register("email", { required: true, maxLength: 100 })}
+            {...register(firstType, { required: true, maxLength: 100 })}
             className="border w-full rounded-md py-1 px-2"
             placeholder={placeHolder1}
           />
-          {errors.email && (
+          {errors.firstType && (
             <p className="text-red-400 text-sm ml-1">
-              {errors.email.type === "required" &&
+              {errors.firstType.type === "required" &&
                 "Это поле обязательно для заполнения"}
-              {errors.email.type === "maxLength" &&
+              {errors.firstType.type === "maxLength" &&
                 "Максимальная длина 100 символов"}
             </p>
           )}
         </div>
         <div className="text-start">
           <input
+            required
             type="text"
-            {...register("message", {
+            {...register(secondType, {
               required: true,
               maxLength: 100,
             })}
             className="border w-full rounded-md py-1 px-2"
             placeholder={placeHolder2}
           />
-          {errors.message && (
+          {errors.secondType && (
             <p className="text-red-400 text-sm ml-1">
-              {errors.message.type === "required" &&
+              {errors.secondType.type === "required" &&
                 "Это поле обязательно для заполнения"}
-              {errors.message.type === "maxLength" &&
+              {errors.secondType.type === "maxLength" &&
                 "Максимальная длина 100 символов"}
             </p>
           )}

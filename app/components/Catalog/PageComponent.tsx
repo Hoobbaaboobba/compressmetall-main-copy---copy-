@@ -14,11 +14,11 @@ const PageComponent: React.FC<PageComponentProps> = ({ data }) => {
           <h2 className="font-bold text-xl mt-4 text-gray-bg text-center md:text-start">
             {product.label}
           </h2>
-          <ul className="flex flex-wrap w-full gap-2 sm:gap-4 justify-center items-center lg:justify-start lg:items-start">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-2 sm:gap-4">
             {product.items.map((item: any, index: Key | null | undefined) => (
               <Link
                 key={index}
-                className="cursor-pointer p-[10px] sm:p-[20px] border border-light-gray rounded-lg first-letter:font-bold hover:opacity-100 w-[180px] sm:w-[230px] flex flex-col justify-center items-center hover:shadow-lg transition duration-200"
+                className="cursor-pointer p-[10px] sm:p-[20px] border border-light-gray rounded-lg first-letter:font-bold hover:opacity-100 w-full sm:w-[230px] flex flex-col justify-center items-center hover:shadow-lg transition duration-200"
                 href={`/catalog/${product.label}/${item[0]}?i=${item[1]}&q=${item[2]}&amount=${item[3]}`}
               >
                 <li className="flex flex-col w-full h-full justify-center items-center gap-6">

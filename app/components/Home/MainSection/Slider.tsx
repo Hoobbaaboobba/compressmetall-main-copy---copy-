@@ -134,8 +134,8 @@ export const Slider = () => {
               description={"Оставьте ваши контакты и мы ответим Вам"}
               placeHolder1={"Почта"}
               placeHolder2={"Ваше имя / Ваша компания"}
-              firstType={"email"}
-              secondType={"name"}
+              firstType={"Почта"}
+              secondType={"Имя"}
             />
             <div onClick={hideCall}>
               <CloseOutlinedIcon className="absolute top-2 right-2 text-gray-bg cursor-pointer" />

@@ -65,8 +65,8 @@ const UpperHeader = () => {
             description={"Оставьте ваши контакты и мы перезвоним Вам"}
             placeHolder1={"Ваше имя / Ваша компания"}
             placeHolder2={"Ваш номер телефона"}
-            firstType={"name"}
-            secondType={"telephone"}
+            firstType={"Имя"}
+            secondType={"Номер телефона"}
           />
           <div onClick={hideCall}>
             <CloseOutlinedIcon className="absolute top-2 right-2 text-gray-bg cursor-pointer" />

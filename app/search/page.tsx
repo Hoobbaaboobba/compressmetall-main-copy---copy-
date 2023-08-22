@@ -30,7 +30,7 @@ const SearchPage = () => {
       <h2 className="text-2xl text-center lg:text-start">
         По запросу: <span className="font-bold">"{query}"</span>
       </h2>
-      <div className=" max-w-[1000px] w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4 py-4 px-2 sm:px-4">
+      <div className=" max-w-[1000px] w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 py-4 px-2 sm:px-4">
         {currentPosts.length > 0 ? (
           currentPosts.map((post: any, index: number) => (
             <div
