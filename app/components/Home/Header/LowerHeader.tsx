@@ -187,15 +187,14 @@ const LowerHeader = () => {
           Каталог
         </Link>
         <hr className="border w-full" />
-        <Link
-          href="/price"
+        <button
           className={`font-bold w-full flex justify-center items-center py-6 ${
             pathname === "/price" ? "bg-orange-bg" : "bg-transparent"
           }`}
-          onClick={navbarHide}
+          onClick={orderPrice}
         >
           Прайс
-        </Link>
+        </button>
         <hr className="border w-full" />
         <Link
           href="/about_company"
