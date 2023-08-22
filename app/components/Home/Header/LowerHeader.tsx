@@ -19,6 +19,7 @@ const LowerHeader = () => {
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [call, setCall] = useState(false);
+  const [price, setPrice] = useState(false);
   const [popUp, setPopUp] = useState(false);
 
   const orderCall = () => {
@@ -28,6 +29,16 @@ const LowerHeader = () => {
 
   const hideCall = () => {
     setCall(false);
+    document.body.style.overflowY = "auto";
+  };
+
+  const orderPrice = () => {
+    setPrice(true);
+    document.body.style.overflowY = "hidden";
+  };
+
+  const hidePrice = () => {
+    setPrice(false);
     document.body.style.overflowY = "auto";
   };
 
@@ -49,8 +60,12 @@ const LowerHeader = () => {
           <div className="relative w-1/5">
             <MenuButton src={"/catalog"} name="Каталог" icon="true" />
           </div>
-          <div className="relative w-1/5">
-            <MenuButton src={"/price"} name="Прайс" icon="false" />
+          <div
+            onClick={orderPrice}
+            className="relative w-1/5 flex py-2 font-medium justify-center items-center gap-8
+      xl:hover:bg-orange-bg transition"
+          >
+            Прайс
           </div>
           <div
             className="relative w-1/5"
@@ -247,6 +262,29 @@ const LowerHeader = () => {
             secondType={"Имя"}
           />
           <div onClick={hideCall}>
+            <CloseOutlinedIcon className="absolute top-2 right-2 text-gray-bg cursor-pointer" />
+          </div>
+        </div>
+      </div>
+      <div
+        className={` ${
+          price ? "flex" : "hidden"
+        } justify-center items-center fixed top-0 left-0 z-50 px-6 w-full h-[100vh]`}
+      >
+        <div
+          onClick={hidePrice}
+          className="bg-black bg-opacity-70 backdrop-blur-2 w-full h-[100vh] fixed top-0 left-0"
+        ></div>
+        <div className="relative z-50">
+          <OrderCall
+            topic={`Запросить прайс`}
+            description={"Оставьте ваши контакты и мы отправим Вам прайс"}
+            placeHolder1={"Ваш номер телефона"}
+            placeHolder2={"Товар"}
+            firstType={"Номер телефона"}
+            secondType={"Товар"}
+          />
+          <div onClick={hidePrice}>
             <CloseOutlinedIcon className="absolute top-2 right-2 text-gray-bg cursor-pointer" />
           </div>
         </div>
