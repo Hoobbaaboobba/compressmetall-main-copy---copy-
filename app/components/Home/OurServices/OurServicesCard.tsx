@@ -1,5 +1,5 @@
 import Image from "next/image";
-import OrangeButton from "../../OrangeButton";
+import Link from "next/link";
 
 interface OurServicesCard {
   image: string;
@@ -21,9 +21,11 @@ const OurServicesCard: React.FC<OurServicesCard> = ({
           <p className="opacity-80 text-sm">{description}</p>
         </div>
       </div>
-      <button className="py-2 px-6 boxshadow text-white bg-orange-bg mt-4 underline">
-        Подробнее
-      </button>
+      <Link href="/services">
+        <button className="py-2 px-6 boxshadow text-white bg-orange-bg mt-4 underline">
+          Подробнее
+        </button>
+      </Link>
     </div>
   );
 };
