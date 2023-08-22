@@ -74,13 +74,6 @@ const CatalogMenu = () => {
       items: true,
     },
     {
-      label: "Строительные материалы",
-      img: menuCatalogStroy,
-      data: blackMetal,
-      bold: "",
-      items: true,
-    },
-    {
       label: "Позиции под заказы",
       img: menuCatalogPosotion,
       data: blackMetal,

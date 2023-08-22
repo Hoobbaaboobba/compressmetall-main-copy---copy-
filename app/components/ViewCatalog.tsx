@@ -69,12 +69,6 @@ const items = [
   },
   {
     data: colorMetal,
-    label: "Строительные материалы",
-    img: menuCatalogSplav,
-    links: true,
-  },
-  {
-    data: colorMetal,
     label: "Позиции под заказы",
     img: menuCatalogStroy,
     links: false,
