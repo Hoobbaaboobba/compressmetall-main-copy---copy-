@@ -30,12 +30,12 @@ const SearchPage = () => {
       <h2 className="text-2xl text-center lg:text-start">
         По запросу: <span className="font-bold">"{query}"</span>
       </h2>
-      <div className=" max-w-[1000px] w-full grid grid-cols-5 lg:justify-start lg:items-start gap-4 py-4">
+      <div className=" max-w-[1000px] w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4 py-4 px-2 sm:px-4">
         {currentPosts.length > 0 ? (
           currentPosts.map((post: any, index: number) => (
             <div
               key={index}
-              className="rounded-md relative border text-center border-light-gray gap-2 w-[190px] min-h-[250px] flex flex-col justify-between items-center p-[20px] cursor-pointer hover:shadow-lg transition duration-200"
+              className="rounded-md relative border text-center border-light-gray gap-2 w-full min-h-[250px] flex flex-col justify-between items-center p-[20px] cursor-pointer hover:shadow-lg transition duration-200"
             >
               <Link
                 href={`/catalog/${encodeURI(post[0])}/${encodeURI(
