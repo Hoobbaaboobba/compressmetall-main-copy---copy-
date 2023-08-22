@@ -21,13 +21,9 @@ const OurServicesCard: React.FC<OurServicesCard> = ({
           <p className="opacity-80 text-sm">{description}</p>
         </div>
       </div>
-      <OrangeButton
-        type={""}
-        bgTransparent={false}
-        checkMark={false}
-        isForm={false}
-        label={"Подробнее"}
-      />
+      <button className="py-2 px-6 boxshadow text-white bg-orange-bg mt-4 underline">
+        Подробнее
+      </button>
     </div>
   );
 };
