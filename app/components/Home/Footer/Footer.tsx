@@ -131,7 +131,7 @@ const Footer = () => {
             <div className="flex w-full text-start md:text-start flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
               <EmailOutlinedIcon className="text-orange-bg" />
               <Link href="/email" className="font-bold ">
-                info@metallllll.ru
+                info@kometal.ru
               </Link>
             </div>
           </div>
