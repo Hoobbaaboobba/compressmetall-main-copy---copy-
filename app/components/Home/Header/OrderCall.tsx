@@ -38,7 +38,7 @@ const OrderCall: React.FC<OrderCallProps> = ({
       <p className="font-bold text-base opacity-70 mb-2">{description}</p>
       <form
         method="POST"
-        action="https://formsubmit.co/xopoxopox@gmail.com"
+        action="https://formsubmit.co/info@kometal.ru"
         onSubmit={onSubmit}
         target="_blank"
         className="flex flex-col text-black gap-4 mt-2"

@@ -31,7 +31,7 @@ const catalog = [
     href: "/catalog?q=",
   },
   {
-    label: "Цветноц металл",
+    label: "Цветной металл",
     href: "/catalog?q=",
   },
   {
