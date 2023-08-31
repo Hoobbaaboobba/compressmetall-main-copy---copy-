@@ -11,8 +11,9 @@ import OurContacts from "./components/Home/OurContacts/OurContacts";
 import Reviews from "./components/Home/Reviews/Reviews";
 import GoToTop from "./components/Catalog/GoToTop";
 import Script from "next/script";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Копресс металл",
     template: "%s | Копресс металл",
