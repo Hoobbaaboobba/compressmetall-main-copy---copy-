@@ -10,6 +10,7 @@ import BuyMetal from "./components/Home/BuyMetal/BuyMetal";
 import OurContacts from "./components/Home/OurContacts/OurContacts";
 import Reviews from "./components/Home/Reviews/Reviews";
 import GoToTop from "./components/Catalog/GoToTop";
+import Script from "next/script";
 
 export const metadata = {
   title: {
@@ -48,6 +49,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-3TEWXXP5JB"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-3TEWXXP5JB');
+        `}
+      </Script>
       <body>
         <Header />
         <div className="flex w-full justify-center mt-[80px] xl:mt-[130px]">
