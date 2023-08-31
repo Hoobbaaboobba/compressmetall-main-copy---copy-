@@ -1,3 +1,5 @@
+"use client";
+
 import { Metadata } from "next";
 import MainSection from "./components/Home/MainSection/MainSection";
 import Advantages from "./components/Home/advantages/Advantages";
