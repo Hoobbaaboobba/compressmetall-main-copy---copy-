@@ -53,7 +53,7 @@ const CatalogMenu = () => {
       items: true,
     },
     {
-      label: "Метиза",
+      label: "Метизы",
       img: menuCatalogMetiza,
       data: metiza,
       bold: "",

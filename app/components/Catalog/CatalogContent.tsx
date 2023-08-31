@@ -22,7 +22,7 @@ const CatalogContent: React.FC<CatalogContentProps> = ({ query }) => {
       {query === "Цветной металл" ? <PageComponent data={colorMetal} /> : ""}
       {query === "Нержавеющая сталь" ? <PageComponent data={nershav} /> : ""}
       {query === "Оцинкованная сталь" ? <PageComponent data={zincMetal} /> : ""}
-      {query === "Метиза" ? <PageComponent data={metiza} /> : ""}
+      {query === "Метизы" ? <PageComponent data={metiza} /> : ""}
       {query === "Трубопроводная арматура" ? (
         <PageComponent data={truba} />
       ) : (

@@ -1,7 +1,7 @@
 import { posts } from "@/posts";
 
 export default function sitemap() {
-  const baseUrl = "https://kometal.vercel.app";
+  const baseUrl = "https://www.kometal.ru";
 
   const links = posts;
   const linksUrls = links.map((link) => ({

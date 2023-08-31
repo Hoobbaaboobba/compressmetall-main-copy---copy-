@@ -57,7 +57,7 @@ const items = [
   },
   {
     data: metiza,
-    label: "Метиза",
+    label: "Метизы",
     img: menuCatalogMetiza,
     links: true,
   },
