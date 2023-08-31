@@ -10,8 +10,12 @@ import logo from "../../../assets/logo.png";
 import CityButton from "./CityButton";
 import Search from "./Search";
 import OrderCall from "./OrderCall";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import LoadingGif from "../../../assets/loading.gif";
 
+const Loading = () => {
+  return <Image src={LoadingGif} alt="loading" width={100} height={100} />;
+};
 const UpperHeader = () => {
   const [call, setCall] = useState(false);
 
@@ -34,7 +38,9 @@ const UpperHeader = () => {
         <h3 className="text-base font-normal text-black opacity-80">
           Продажа металлопроката по всей <br /> территории России и СНГ
         </h3>
-        <Search />
+        <Suspense fallback={<Loading />}>
+          <Search />
+        </Suspense>
         <div className="flex flex-col">
           <div className="flex gap-2">
             <EmailOutlinedIcon className="text-orange-bg mt-[3px]" />

@@ -12,6 +12,8 @@ import Reviews from "./components/Home/Reviews/Reviews";
 import GoToTop from "./components/Catalog/GoToTop";
 import Script from "next/script";
 import { Metadata } from "next";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: {
@@ -77,7 +79,9 @@ export default function RootLayout({
           });`}
       </Script>
       <body>
-        <Header />
+        <Suspense fallback={<Loading />}>
+          <Header />
+        </Suspense>
         <div className="flex w-full justify-center mt-[80px] xl:mt-[130px]">
           <div className="max-w-[1300px] w-full flex justify-center xl:justify-between gap-4">
             <CatalogMenu />

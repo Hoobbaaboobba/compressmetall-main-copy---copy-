@@ -2,6 +2,9 @@ import { Metadata } from "next";
 
 import { ids } from "@/app/components/pagesLinks";
 import DynamicPage from "@/app/components/Home/MainSection/DynamicPage";
+import { Suspense } from "react";
+import LoadingGif from "../../assets/loading.gif";
+import Image from "next/image";
 
 type Props = {
   params: {
@@ -44,6 +47,9 @@ export async function generateStaticParams() {
 
   return data;
 }
+const Loading = () => {
+  return <Image src={LoadingGif} alt="loading" width={100} height={100} />;
+};
 
 export default async function MetalPage({ params }: Props) {
   // const id = params.id;
@@ -54,7 +60,9 @@ export default async function MetalPage({ params }: Props) {
 
   return (
     <main className="mt-8 w-full">
-      <DynamicPage category={pageCategory} id={pageLabel} />
+      <Suspense fallback={<Loading />}>
+        <DynamicPage category={pageCategory} id={pageLabel} />
+      </Suspense>
     </main>
   );
 }
