@@ -17,7 +17,7 @@ import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: {
-    default: "Копресс металл",
+    default: "Металлопрокат по всей Москве и Московской области",
     template: "%s | Копресс металл",
   },
   description: "Продажа металлопроката по всей территории России и СНГ",
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     "Компресс металл",
     "Металлопрокат",
     "Московский  компрессорный завод",
-    "111024, Г.MOCKBA, BH.TEP.Г.  МУНИЦИПАЛЬНЫЙ ОКРУГ ПЕРОВО, УЛ 2-Я  ЭНТУЗИАСТОВ, Д. 5 K. 40 , ПОМЕЩ. 12/3",
   ],
   authors: [{ name: "Попкова Екатерина Александровна" }],
   creator: "Reptile Design",
