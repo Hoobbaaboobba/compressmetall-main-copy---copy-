@@ -17,7 +17,7 @@ import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: {
-    default: "Металлопрокат по всей Москве и Московской области",
+    default: "Копресс металл",
     template: "%s | Копресс металл",
   },
   description: "Продажа металлопроката по всей территории России и СНГ",
