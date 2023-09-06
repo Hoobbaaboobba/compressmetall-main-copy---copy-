@@ -3,7 +3,6 @@
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
-import OrangeButton from "../../OrangeButton";
 import mapImage from "../../../assets/mapImage.png";
 
 import Image from "next/image";
