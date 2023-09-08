@@ -19,13 +19,14 @@ const OurContacts = () => {
               <div className="flex flex-col xl:flex-row xl:gap-4 justify-center items-center">
                 <PlaceOutlinedIcon className="text-orange-bg" />
                 <p className="text-gray-bg text-center xl:text-start">
-                  Автозаводская ул., д.17, к, <br /> Москва, 115280
+                  111024, Г.МОСКВА, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ПЕРОВО, УЛ 2-Я
+                  ЭНТУЗИАСТОВ, Д. 5 К. 40 , ПОМЕЩ. 12/3
                 </p>
               </div>
               <div className="flex flex-col xl:flex-row xl:gap-4 justify-center items-center">
                 <LocalPhoneOutlinedIcon className="text-orange-bg" />
                 <div className="flex flex-col text-center xl:text-start">
-                  <p className="font-bold text-gray-bg">+7 (988) 199-90-00</p>
+                  <p className="font-bold text-gray-bg">+7 (495) 116 66 86</p>
                   <p className="text-gray-bg">Пн. – Пт.: с 9:00 до 18:00</p>
                 </div>
               </div>
