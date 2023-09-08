@@ -118,13 +118,14 @@ const Footer = () => {
             <div className="flex w-full flex-col text-center md:text-start md:flex-row gap-2 md:gap-4 justify-start items-center">
               <PlaceOutlinedIcon className="text-orange-bg" />
               <p>
-                Автозаводская ул., д.17, к, <br /> Москва, 115280
+                111024, Г.МОСКВА, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ПЕРОВО, УЛ 2-Я
+                ЭНТУЗИАСТОВ, Д. 5 К. 40 , ПОМЕЩ. 12/3
               </p>
             </div>
             <div className="flex w-full flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
               <LocalPhoneOutlinedIcon className="text-orange-bg" />
               <div className="flex flex-col text-center md:text-start">
-                <p className="font-bold">+7 (888) 888-88-88</p>
+                <p className="font-bold">+7 (495) 116 66 86</p>
                 <p className="opacity-70">Пн. – Пт.: с 9:00 до 18:00</p>
               </div>
             </div>
