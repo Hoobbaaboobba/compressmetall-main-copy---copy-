@@ -26,12 +26,13 @@ body {
   appearance: none;
   height: 10px;
   width: 10px;
-  background-image: url("./assets/orangeCross.png");
+  background-image: url("/orangeCross.png");
   background-size: 10px 10px;
+  cursor: pointer;
 }
 
 .bgImg {
-  background-image: url("./assets/websiteBackground.png");
+  background-image: url("/websiteBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(211, 211, 211, 0.459);
@@ -79,7 +80,7 @@ body {
 }
 
 .slider1 {
-  background-image: url("./assets/mainphoto.png");
+  background-image: url("/mainphoto.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
@@ -89,7 +90,7 @@ body {
 }
 
 .slider2 {
-  background-image: url("./assets/backgroundMap.png");
+  background-image: url("/backgroundMap.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 60% 50%;
@@ -99,7 +100,7 @@ body {
 }
 
 .slider3 {
-  background-image: url("./assets/backgroundImage.png");
+  background-image: url("/backgroundImage.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
@@ -110,7 +111,7 @@ body {
 
 @media (min-width: 640px) {
   .slider {
-    background-image: url("./assets/mainphoto.png");
+    background-image: url("/mainphoto.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: unset;

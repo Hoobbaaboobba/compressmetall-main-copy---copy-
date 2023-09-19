@@ -1,19 +1,24 @@
-import Header from "./components/Home/Header/Header";
-import Footer from "./components/Home/Footer/Footer";
-import OurPartners from "./components/Home/OurPartners/OurPartners";
+import Header from "../components/Home/Header/Header";
+import Footer from "../components/Home/Footer/Footer";
+import OurPartners from "../components/Home/OurPartners/OurPartners";
 import "./globals.css";
-import ViewCatalog from "./components/ViewCatalog";
-import CatalogMenu from "./components/Home/MainSection/CatalogMenu";
-import OurMetal from "./components/Home/OurMetal/OurMetal";
-import OurServices from "./components/Home/OurServices/OurServices";
-import BuyMetal from "./components/Home/BuyMetal/BuyMetal";
-import OurContacts from "./components/Home/OurContacts/OurContacts";
-import Reviews from "./components/Home/Reviews/Reviews";
-import GoToTop from "./components/Catalog/GoToTop";
+import ViewCatalog from "../components/ViewCatalog";
+import CatalogMenu from "../components/Home/MainSection/CatalogMenu";
+import OurMetal from "../components/Home/OurMetal/OurMetal";
+import OurServices from "../components/Home/OurServices/OurServices";
+import BuyMetal from "../components/Home/BuyMetal/BuyMetal";
+import OurContacts from "../components/Home/OurContacts/OurContacts";
+import Reviews from "../components/Home/Reviews/Reviews";
+import GoToTop from "../components/Catalog/GoToTop";
 import Script from "next/script";
 import { Metadata } from "next";
 import { Suspense } from "react";
-import Loading from "./loading";
+import Loading from "./(main)/loading";
+import LocationModal from "@/components/LocationModal";
+import Request from "../components/Requests/Request";
+import Call from "@/components/Requests/Call";
+import Price from "@/components/Requests/Price";
+import ViewCatalogButton from "@/components/ViewCatalogButton";
 
 export const metadata: Metadata = {
   title: {
@@ -35,9 +40,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Компресс металл",
     description: "Продажа металлопроката по всей территории России и СНГ",
-    url: "https://kometal.vercel.app",
+    url: "https://www.kometal.ru",
     images: {
-      url: "https://kometal.vercel.app/_next/static/media/stainlessBarMetal.f86f7842.png",
+      url: "https://www.kometal.ru/_next/static/media/stainlessBarMetal.f86f7842.png",
       width: 200,
       height: 200,
     },
@@ -78,6 +83,11 @@ export default function RootLayout({
           });`}
       </Script>
       <body>
+        <LocationModal />
+        <Request />
+        <Call />
+        <Price />
+        <ViewCatalogButton />
         <Suspense fallback={<Loading />}>
           <Header />
         </Suspense>

@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-interface AuthModalStore {
+interface RequestStore {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
 }
 
-const useRequestModal = create<AuthModalStore>((set) => ({
+const useRequestModal = create<RequestStore>((set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
