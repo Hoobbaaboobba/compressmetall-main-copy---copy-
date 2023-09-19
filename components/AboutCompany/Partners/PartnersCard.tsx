@@ -13,7 +13,7 @@ const PartnersCard: React.FC<PartnersProps> = ({ src, label, href }) => {
       href={href}
       className="w-[220px] h-[220px] border border-light-gray rounded-xl flex justify-center items-center hover:shadow-md transition"
     >
-      <Image src={require(`/${src}.png`)} alt={label} width={220} height={91} />
+      <Image src={`/${src}.png`} alt={label} width={220} height={91} />
     </Link>
   );
 };
