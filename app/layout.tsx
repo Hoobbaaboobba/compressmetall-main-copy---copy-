@@ -13,7 +13,7 @@ import GoToTop from "../components/Catalog/GoToTop";
 import Script from "next/script";
 import { Metadata } from "next";
 import { Suspense } from "react";
-import Loading from "./(main)/loading";
+import Loading from "./loading";
 import LocationModal from "@/components/LocationModal";
 import Request from "../components/Requests/Request";
 import Call from "@/components/Requests/Call";
