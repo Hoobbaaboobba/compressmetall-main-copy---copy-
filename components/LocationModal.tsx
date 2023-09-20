@@ -73,7 +73,7 @@ const LocationModal = () => {
     <div
       className={`fixed ${
         isOpen ? "flex" : "hidden"
-      } justify-center items-start z-[100] top-0 left-0 w-full h-[100vh] bg-black/40 transition`}
+      } justify-center items-start z-[100] top-0 left-0 w-full h-[100dvh] bg-black/40 transition`}
     >
       <div
         onClick={onClose}

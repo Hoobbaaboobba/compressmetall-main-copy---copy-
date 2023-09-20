@@ -1,5 +1,7 @@
 export default function Loading() {
   return (
-    <div className="flex flex-col w-full h-[300px] bg-light-gray justify-between items-center py-3 rounded-e-lg"></div>
+    <div className="fixed w-full h-[92px] top-0 left-0 flex justify-center items-center">
+      <div className="w-full max-w-[1300px] bg-light-gray rounded-lg h-[80px"></div>
+    </div>
   );
 }
