@@ -1,3 +1,5 @@
+"use client";
+
 import SearchContent from "@/components/Search/SearchContent";
 import { posts } from "@/posts";
 import { useSearchParams } from "next/navigation";
