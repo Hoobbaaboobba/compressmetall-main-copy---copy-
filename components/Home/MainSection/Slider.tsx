@@ -66,6 +66,7 @@ export const Slider = () => {
           alt="slider_img"
           quality={100}
           fill
+          loading="eager"
           sizes="(max-width: 1050px), (height: 300px)"
           style={{
             objectFit: "cover",
@@ -92,6 +93,7 @@ export const Slider = () => {
           alt="slider_img"
           quality={100}
           fill
+          loading="eager"
           sizes="(width: 100%), (height: 300px)"
           style={{
             objectFit: "cover",
@@ -118,6 +120,7 @@ export const Slider = () => {
           alt="slider_img"
           quality={100}
           fill
+          loading="eager"
           sizes="(width:100%, (height: 300px)"
           style={{
             objectFit: "cover",

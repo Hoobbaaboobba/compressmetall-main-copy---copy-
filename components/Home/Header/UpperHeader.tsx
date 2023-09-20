@@ -9,6 +9,7 @@ import Search from "./Search";
 import { Suspense } from "react";
 import useLocationModal from "@/hooks/useLocationModal";
 import useCallModal from "@/hooks/useCallModal";
+import Logo from "./Logo";
 
 const Loading = () => {
   return <Image src="/loading.gif" alt="loading" width={100} height={100} />;
@@ -27,9 +28,7 @@ const UpperHeader = () => {
   return (
     <div className="hidden xl:flex justify-center bg-white items-center w-full text-white py-3">
       <div className="flex justify-between items-center max-w-[1300px] w-full">
-        <Link href={`/${link}`}>
-          <Image src="/logo.png" alt="logo" width={135} height={68} />
-        </Link>
+        <Logo />
         <CityButton />
         <h3 className="text-base font-normal text-black opacity-80">
           Продажа металлопроката по всей <br /> территории России и СНГ
