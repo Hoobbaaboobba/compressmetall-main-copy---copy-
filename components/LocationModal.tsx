@@ -80,12 +80,12 @@ const LocationModal = () => {
         className="fixed top-0 left-0 w-full h-[100vh]"
       ></div>
       <div
-        className={`flex flex-col z-50 gap-4 justify-center items-center bg-white rounded-lg mt-[100px] transition duration-200`}
+        className={`flex flex-col max-w-[400px] w-full mx-4 z-50 gap-4 justify-center items-center bg-white rounded-lg mt-[100px] transition duration-200`}
       >
         <div
           className={`${
             changeLoc ? "hidden" : "flex"
-          } flex-col justify-center items-center gap-6 w-[400px] py-[70px]`}
+          } flex-col justify-center items-center gap-6 w-full py-[70px]`}
         >
           <h1 className="font-bold text-2xl">
             {" "}

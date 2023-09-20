@@ -15,6 +15,7 @@ import usePriceModal from "@/hooks/usePriceModal";
 import useRequestModal from "@/hooks/useRequestModal";
 import useLocationModal from "@/hooks/useLocationModal";
 import CityButton from "./CityButton";
+import Logo from "./Logo";
 
 const LowerHeader = () => {
   const [menu, setMenu] = useState(false);
@@ -124,10 +125,10 @@ const LowerHeader = () => {
             />
           </div>
         </div>
-        <Link href={`/${link}`} onClick={() => setMenu(false)}>
-          <Image src="/logo.png" alt="logo" width={135} height={68} />
-        </Link>
-        <CityButton />
+        <Logo />
+        <div className={`${search ? "hidden" : "block"}`}>
+          <CityButton />
+        </div>
         <div className="hidden md:block">
           <Search />
         </div>

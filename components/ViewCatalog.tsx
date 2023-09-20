@@ -15,68 +15,68 @@ import useCatalogModal from "@/hooks/useCatalogModal";
 import useLocationModal from "@/hooks/useLocationModal";
 import OrangeButton from "./OrangeButton";
 import usePriceModal from "@/hooks/usePriceModal";
-import useCallModal from "@/hooks/useCallModal";
 import Link from "next/link";
+import useRequestModal from "@/hooks/useRequestModal";
 
 const items = [
   {
     data: blackMetal,
     label: "Чёрный метал",
-    img: "/menuCatalog",
+    img: "menuCatalog",
     links: true,
   },
   {
     data: colorMetal,
     label: "Цветной метал",
-    img: "/menuCatalogColor",
+    img: "menuCatalogColor",
     links: true,
   },
   {
     data: nershav,
     label: "Нержавеющая сталь",
-    img: "/menuCatalogSteel",
+    img: "menuCatalogSteel",
     links: true,
   },
   {
     data: zincMetal,
     label: "Оцинкованная сталь",
-    img: "/menuCatalogZincSteel",
+    img: "menuCatalogZincSteel",
     links: true,
   },
   {
     data: metiza,
     label: "Метизы",
-    img: "/menuCatalogMetiza",
+    img: "menuCatalogMetiza",
     links: true,
   },
   {
     data: precenSplav,
     label: "Прецензионные сплавы",
-    img: "/menuCatalogTruba",
+    img: "menuCatalogTruba",
     links: true,
   },
   {
     data: colorMetal,
     label: "Позиции под заказы",
-    img: "/menuCatalogStroy",
+    img: "menuCatalogStroy",
     links: false,
   },
   {
     data: colorMetal,
     label: "Остатки",
-    img: "/menuCatalogServices",
+    img: "menuCatalogServices",
     links: false,
   },
   {
     data: colorMetal,
     label: "Размотка арматура",
-    img: "/menuCatalogStroy",
+    img: "menuCatalogStroy",
     links: false,
   },
   {
     data: colorMetal,
     label: "Плазменная резка",
-    img: "/menuCatalogPosotion",
+    img: "menuCatalogPosotion",
     links: false,
   },
 ];
@@ -87,15 +87,15 @@ const ViewCatalog = () => {
 
   const { link } = useLocationModal();
   const { onOpen } = usePriceModal();
-  const { onOpen: onOpenCall } = useCallModal();
+  const { onOpen: onOpenRequest } = useRequestModal();
 
   const showPrice = () => {
     onOpen();
     document.body.style.overflowY = "hidden";
   };
 
-  const showCall = () => {
-    onOpenCall();
+  const showRequest = () => {
+    onOpenRequest();
     document.body.style.overflowY = "hidden";
   };
 
@@ -128,7 +128,7 @@ const ViewCatalog = () => {
               <div className="flex flex-col sm:flex-row gap-y-2 justify-center items-center sm:justify-between border-b border-b-black pb-4">
                 <h1 className="font-bold text-3xl uppercase">{card.label}</h1>
                 <div onClick={showPrice}>
-                  <OrangeButton label={"Уточнить размер или цены"} />
+                  <OrangeButton label={"Уточнить размер или цены"} mark />
                 </div>
               </div>
               {card.links ? (
@@ -180,12 +180,9 @@ const ViewCatalog = () => {
                       оформить заказ в любой удобной вам форме:
                     </h2>
                   </div>
-                  <button
-                    onClick={showCall}
-                    className="py-2 px-4 boxshadow bg-orange-bg underline text-white"
-                  >
-                    Оставить заявку
-                  </button>
+                  <div onClick={showRequest}>
+                    <OrangeButton label={"Оставить заявку"} />
+                  </div>
                   <OurContacts />
                 </div>
               )}
