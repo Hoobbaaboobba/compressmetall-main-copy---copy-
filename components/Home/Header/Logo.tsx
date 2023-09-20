@@ -12,7 +12,13 @@ const Logo = () => {
   };
   return (
     <Link href={`/${link}`} onClick={closeMenu}>
-      <Image src="/logo.png" alt="logo" width={135} height={68} />
+      <Image
+        src="/logo.png"
+        alt="logo"
+        width={135}
+        height={68}
+        loading="eager"
+      />
     </Link>
   );
 };

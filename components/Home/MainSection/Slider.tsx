@@ -3,9 +3,13 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import useRequestModal from "@/hooks/useRequestModal";
 import OrangeButton from "@/components/OrangeButton";
+import Image from "next/image";
+
+import sliderImageFactory from "../../../public/mainphoto.png";
+import sliderImageMap from "../../../public/backgroundMap.png";
+import sliderImageMetal from "../../../public/backgroundImage.png";
 
 export const Slider = () => {
   const { onOpen } = useRequestModal();
@@ -57,6 +61,18 @@ export const Slider = () => {
       className="keen-slider text-white w-full max-w-[1050px]"
     >
       <div className="keen-slider__slide slider1 relative max-w-[1050px]">
+        <Image
+          src={sliderImageFactory}
+          alt="slider_img"
+          quality={100}
+          fill
+          sizes="(max-width: 1050px), (height: 300px)"
+          style={{
+            objectFit: "cover",
+            objectPosition: "top right",
+          }}
+          placeholder="blur"
+        />
         <div className="absolute top-[20%] left-[5%] z-10 flex justify-start items-start flex-col gap-1">
           <h1 className="uppercase text-xl sm:text-4xl font-bold">
             широкий выбор <br /> металлургической продукции
@@ -71,6 +87,18 @@ export const Slider = () => {
         </div>
       </div>
       <div className="keen-slider__slide slider2 relative max-w-[1050px]">
+        <Image
+          src={sliderImageMap}
+          alt="slider_img"
+          quality={100}
+          fill
+          sizes="(width: 100%), (height: 300px)"
+          style={{
+            objectFit: "cover",
+            objectPosition: "60% 50%",
+          }}
+          placeholder="blur"
+        />
         <div className="absolute top-[20%] left-[5%] z-10 flex justify-start items-start flex-col gap-1">
           <h1 className="uppercase text-xl sm:text-4xl font-bold">
             Качественный металлопрокат: <br /> ваш надежный партнер
@@ -85,6 +113,18 @@ export const Slider = () => {
         </div>
       </div>
       <div className="keen-slider__slide slider3 relative max-w-[1050px]">
+        <Image
+          src={sliderImageMetal}
+          alt="slider_img"
+          quality={100}
+          fill
+          sizes="(width:100%, (height: 300px)"
+          style={{
+            objectFit: "cover",
+            objectPosition: "top right",
+          }}
+          placeholder="blur"
+        />
         <div className="absolute top-[20%] left-[5%] z-10 flex justify-start items-start flex-col gap-1">
           <h1 className="uppercase text-xl sm:text-4xl font-bold">
             Ключ к надежной конструкции: <br /> наш металлопрокат

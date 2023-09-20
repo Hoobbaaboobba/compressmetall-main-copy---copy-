@@ -80,45 +80,21 @@ body {
 }
 
 .slider1 {
-  background-image: url("/mainphoto.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
   height: 300px;
   max-width: 1050px;
   width: 100%;
 }
 
 .slider2 {
-  background-image: url("/backgroundMap.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 60% 50%;
   height: 300px;
   max-width: 1050px;
   width: 100%;
 }
 
 .slider3 {
-  background-image: url("/backgroundImage.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
   height: 300px;
   max-width: 1050px;
   width: 100%;
-}
-
-@media (min-width: 640px) {
-  .slider {
-    background-image: url("/mainphoto.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: unset;
-    height: 280px;
-    max-width: 1050px;
-    width: 100%;
-  }
 }
 
 .boxshadow {
