@@ -17,7 +17,8 @@ const useLocationModal = create<LocationModalStore>((set) => ({
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
   changeLocation: (loc) => set({ location: loc }),
-  changeLink: (link) => set({ link: link }),
+  changeLink: (link) =>
+    set({ link: link.toLocaleLowerCase().split(" ").join("") }),
 }));
 
 export default useLocationModal;
