@@ -32,7 +32,7 @@ const OurMetalCard: React.FC<OurMetalCardProps> = ({
         <h2 className="text-sm ">{description}</h2>
       </div>
       <Link
-        href={`${link}/catalog/${encodeURI(name)}/${encodeURI(
+        href={`/${link}/catalog/${encodeURI(name)}/${encodeURI(
           description
         )}?i=${encodeURI(src)}&q=${encodeURI(isInStock)}&amount=${encodeURI(
           amount

@@ -57,7 +57,7 @@ const LowerHeader = () => {
           </div>
           <div
             onClick={showPrice}
-            className="relative w-1/5 flex py-2 font-medium justify-center items-center gap-8 xl:hover:bg-orange-bg transition"
+            className="relative w-1/5 flex py-2 font-medium justify-center items-center gap-8 xl:hover:bg-orange-bg transition cursor-pointer"
           >
             Прайс
           </div>

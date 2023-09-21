@@ -4,14 +4,8 @@ import CatalogItem from "./CatalogItem";
 
 import { useState } from "react";
 import Link from "next/link";
-import OrderCall from "../Header/OrderCall";
-
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import OurContacts from "../OurContacts/OurContacts";
 
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import { usePathname } from "next/navigation";
-import useLocationModal from "@/hooks/useLocationModal";
 import OrangeButton from "@/components/OrangeButton";
 import usePriceModal from "@/hooks/usePriceModal";
 import useRequestModal from "@/hooks/useRequestModal";
@@ -23,6 +17,7 @@ export interface ProductsProps {
   productImg: string;
   bold: string;
   items: boolean;
+  link: string;
 }
 
 const HoverMenuItem: React.FC<ProductsProps> = ({
@@ -32,6 +27,7 @@ const HoverMenuItem: React.FC<ProductsProps> = ({
   productImg,
   bold,
   items,
+  link,
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -45,8 +41,6 @@ const HoverMenuItem: React.FC<ProductsProps> = ({
   const showRequest = () => {
     onOpenRequest(), (document.body.style.overflowY = "hidden");
   };
-
-  const { link } = useLocationModal();
 
   return (
     <>

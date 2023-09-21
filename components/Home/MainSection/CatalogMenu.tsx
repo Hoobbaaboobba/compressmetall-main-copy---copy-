@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import {
@@ -10,6 +12,7 @@ import {
   precenSplav,
 } from "./productsData";
 import HoverMenuItem from "./hoverMenuItem";
+import useLocationModal from "@/hooks/useLocationModal";
 
 const CatalogMenu = () => {
   const items = [
@@ -92,6 +95,8 @@ const CatalogMenu = () => {
     },
   ];
 
+  const { link } = useLocationModal();
+
   return (
     <div className="flex-col relative hidden xl:flex z-30">
       <div className="sticky top-[137px] overflow-y-auto h-[81vh] mt-2 bg-">
@@ -116,6 +121,7 @@ const CatalogMenu = () => {
               topic={item.label}
               bold={item.bold}
               items={item.items}
+              link={link}
             />
             <hr />
           </>
