@@ -30,7 +30,7 @@ const CityButton = () => {
       className="relative"
     >
       <button className="text-orange-bg text-base flex justify-center items-center gap-1 py-4 max-w-[100px] max-h-[56px] sm:max-w-[200px] mx-1">
-        <FmdGoodOutlinedIcon className="hidden sm:block" />
+        <FmdGoodOutlinedIcon />
         {(pathname[1] === "moscow" || pathname[1] === "") && "Москва"}
         {pathname[1] === "ufa" && "Уфа"}
         {pathname[1] === "tver" && "Тверь"}

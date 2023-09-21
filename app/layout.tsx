@@ -11,7 +11,6 @@ import OurContacts from "../components/Home/OurContacts/OurContacts";
 import Reviews from "../components/Home/Reviews/Reviews";
 import GoToTop from "../components/Catalog/GoToTop";
 import Script from "next/script";
-import { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "./loading";
 import LocationModal from "@/components/LocationModal";
@@ -19,35 +18,6 @@ import Request from "../components/Requests/Request";
 import Call from "@/components/Requests/Call";
 import Price from "@/components/Requests/Price";
 import ViewCatalogButton from "@/components/ViewCatalogButton";
-
-export const metadata: Metadata = {
-  title: {
-    default: "Копресс металл",
-    template: "%s | Копресс металл",
-  },
-  description: "Продажа металлопроката по всей территории России и СНГ",
-  generator: "Компресс металл",
-  applicationName: "Компресс металл",
-  keywords: [
-    "OOO 'КОМПРЕСС МЕТАЛЛ'",
-    "Компресс металл",
-    "Металлопрокат",
-    "Московский  компрессорный завод",
-  ],
-  authors: [{ name: "Попкова Екатерина Александровна" }],
-  creator: "Reptile Design",
-  publisher: "Reptile Design",
-  openGraph: {
-    title: "Компресс металл",
-    description: "Продажа металлопроката по всей территории России и СНГ",
-    url: "https://www.kometal.ru",
-    images: {
-      url: "https://www.kometal.ru/_next/static/media/stainlessBarMetal.f86f7842.png",
-      width: 200,
-      height: 200,
-    },
-  },
-};
 
 export default function RootLayout({
   children,

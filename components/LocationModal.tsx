@@ -6,7 +6,6 @@ import axios from "axios";
 import { cities } from "@/regions";
 import OrangeButton from "./OrangeButton";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const LocationModal = () => {
   const [currLocation, setCurrLocation] = useState({
@@ -16,7 +15,6 @@ const LocationModal = () => {
   });
   const [currLocationJs, setCurrLocationJs] = useState({});
   const [changeLoc, setChangeLoc] = useState(false);
-  const [errorLoc, setErrorLoc] = useState(false);
 
   const { onClose, isOpen, changeLocation, changeLink } = useLocationModal();
 
@@ -38,8 +36,6 @@ const LocationModal = () => {
   };
 
   const currentRegion = currLocation.region.toLocaleLowerCase();
-
-  const pathname = usePathname().split("/");
 
   let currentGorod = "";
   let currentCapital = "";
@@ -94,15 +90,31 @@ const LocationModal = () => {
               : `Ваш город ${currentGorod}?`}
           </h1>
           <div className="flex gap-6">
-            <Link href={`/${currentCapital}`} onClick={locationInfo}>
-              <OrangeButton label={"Да"} />
-            </Link>
-            <button
-              onClick={() => setChangeLoc(true)}
-              className="flex justify-center items-center border px-4 py-2"
-            >
-              Выбрать
-            </button>
+            {currentGorod === "не найдена" ? (
+              <>
+                <Link href="/moscow">
+                  <OrangeButton label={"Москва"} />
+                </Link>
+                <button
+                  onClick={() => setChangeLoc(true)}
+                  className="flex justify-center items-center border px-4 py-2"
+                >
+                  Выбрать
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href={`/${currentCapital}`} onClick={locationInfo}>
+                  <OrangeButton label={"Да"} />
+                </Link>
+                <button
+                  onClick={() => setChangeLoc(true)}
+                  className="flex justify-center items-center border px-4 py-2"
+                >
+                  Выбрать
+                </button>
+              </>
+            )}
           </div>
         </div>
         <div
