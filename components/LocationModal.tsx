@@ -92,7 +92,7 @@ const LocationModal = () => {
           <div className="flex gap-6">
             {currentGorod === "не найдена" ? (
               <>
-                <Link href="/moscow">
+                <Link href="/moscow" onClick={locationInfo}>
                   <OrangeButton label={"Москва"} />
                 </Link>
                 <button

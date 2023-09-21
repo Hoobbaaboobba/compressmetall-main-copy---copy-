@@ -14,7 +14,13 @@ const AdvantagesCard: React.FC<AdvantagesCardProps> = ({
   return (
     <div className="flex justify-center items-center gap-4 max-w-[300px]">
       <div className="w-[60px] h-[60px]">
-        <Image src={`/${image}.png`} alt={topic} width={60} height={60} />
+        <Image
+          src={`/${image}.png`}
+          alt={topic}
+          width={60}
+          height={60}
+          priority
+        />
       </div>
       <div className="w-[240px]">
         <h3 className="text-base font-medium">{topic}</h3>

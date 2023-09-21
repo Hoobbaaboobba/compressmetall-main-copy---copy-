@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "металлические отходы в Москве",
     "металлоконструкции в Москве",
     "металлоремонт в Москве",
-    "Казань",
+    "Москва",
   ],
   creator: "Reptile Design",
   publisher: "Reptile Design",

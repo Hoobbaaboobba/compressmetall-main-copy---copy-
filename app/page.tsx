@@ -1,26 +1,57 @@
 import { Metadata } from "next";
 import MainSection from "../components/Home/MainSection/MainSection";
 import Advantages from "../components/Home/advantages/Advantages";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Копресс металл",
-    template: "%s | Копресс металл",
-  },
-  description: "Продажа металлопроката по всей территории России и СНГ",
+  title: "Копресс металл | Донетск",
+  description: "Продажа металлопроката в по всей территории России и СНГ",
   generator: "Компресс металл",
   applicationName: "Компресс металл",
   keywords: [
     "OOO 'КОМПРЕСС МЕТАЛЛ'",
-    "Копресс металл | Москва",
+    "Копресс металл",
     "Металлопрокат",
-    "Московский  компрессорный завод",
+    "Московский компрессорный завод",
+    "металлопрокат",
+    "металлические изделия",
+    "прокат металла",
+    "металлургия",
+    "сталь",
+    "чугун",
+    "алюминий",
+    "железо",
+    "металлический лист",
+    "профиль металлический",
+    "трубы",
+    "арматура",
+    "металлические конструкции",
+    "металлический склад",
+    "горячекатаный металл",
+    "холоднокатаный металл",
+    "металлический пресс",
+    "металлическая фабрика",
+    "металлообработка",
+    "металлоизделия",
+    "металлоторговля",
+    "металлопродукция",
+    "металлорежущий инструмент",
+    "производство металлопродукции",
+    "металлический рынок",
+    "металлопокупка",
+    "металлоснабжение",
+    "склад металла",
+    "металлические отходы",
+    "металлоконструкции",
+    "металлоремонт",
+    "Донетск",
   ],
   creator: "Reptile Design",
   publisher: "Reptile Design",
   openGraph: {
-    title: "Компресс металл",
-    description: "Продажа металлопроката по всей территории России и СНГ",
+    title: "Копресс металл",
+    description: "Продажа металлопроката в по всей территории России и СНГ",
     url: "https://www.kometal.ru",
     images: {
       url: "https://www.kometal.ru/_next/static/media/stainlessBarMetal.f86f7842.png",
@@ -34,7 +65,9 @@ export default function Home() {
   return (
     <main className="flex justify-center">
       <div className="max-w-[1050px] w-full">
-        <MainSection />
+        <Suspense fallback={<Loading />}>
+          <MainSection />
+        </Suspense>
         <Advantages />
       </div>
     </main>

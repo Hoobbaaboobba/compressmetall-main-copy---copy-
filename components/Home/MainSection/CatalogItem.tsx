@@ -11,6 +11,7 @@ interface CatalogItemProps {
 
 const CatalogItem: React.FC<CatalogItemProps> = ({ src, label, bold }) => {
   const [imgHover, setImgHover] = useState(false);
+
   return (
     <div
       onMouseEnter={() => setImgHover(true)}
@@ -19,7 +20,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ src, label, bold }) => {
     >
       <div className="w-[50px] h-[50px] md:w-[80px] md:h-[80px] flex justify-center items-center bg-light-gray transition duration-200">
         <Image
-          src={`/${src}.png`}
+          src={require(`../../../public/${src}.png`)}
           alt={`${label}`}
           width={50}
           height={50}
@@ -27,6 +28,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ src, label, bold }) => {
           className={`${
             imgHover ? "xl:scale-150" : "xl:scale-100"
           } transition duration-200`}
+          placeholder="blur"
         />
       </div>
       <div className="w-[120px] xl:w-[150px] h-[50px] md:h-[80px] text-[14px] flex justify-center items-center text-center px-2">
