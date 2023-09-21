@@ -1,8 +1,3 @@
-import Link from "next/link";
-
-import stainlessBarMetal from "../../../assets/stainlessBarMetal.png";
-
-import Image from "next/image";
 import {
   blackMetal,
   colorMetal,

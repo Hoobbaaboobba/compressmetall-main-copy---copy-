@@ -2,11 +2,6 @@
 
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
-import OrderCall from "../Header/OrderCall";
-
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import OrangeButton from "@/components/OrangeButton";
 import usePriceModal from "@/hooks/usePriceModal";
 
@@ -16,8 +11,6 @@ interface DynamicPageProps {
 }
 
 const DynamicPage: React.FC<DynamicPageProps> = ({ category, id }) => {
-  const [call, setCall] = useState(false);
-
   const { onOpen } = usePriceModal();
 
   const showPrice = () => {
