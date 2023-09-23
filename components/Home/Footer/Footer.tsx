@@ -5,6 +5,8 @@ import Link from "next/link";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import { usePathname } from "next/navigation";
+import { addresses } from "@/addresses";
 
 const company = [
   {
@@ -68,6 +70,8 @@ const services = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname().split("/");
+
   return (
     <footer className="w-full bg-gray-bg flex flex-col justify-center items-center pt-8 px-8 pb-[75px]">
       <div className="max-w-[1300px] w-full text-white flex flex-wrap justify-center xl:justify-between items-start gap-8 pb-4">
@@ -115,10 +119,18 @@ const Footer = () => {
             Наши контакты
           </h3>
           <div className="max-w-[350px] flex flex-col justify-start items-start gap-4">
-            <div className="flex w-full flex-col text-center md:text-start md:flex-row gap-2 md:gap-4 justify-start items-center">
-              <PlaceOutlinedIcon className="text-orange-bg" />
-              <p>2-я Энтузиастов ул., 5 корпус 40, Москва, 111024</p>
-            </div>
+            {addresses.map((address) => {
+              return (
+                <>
+                  {pathname[1] === address.id && (
+                    <div className="flex w-full flex-col text-center md:text-start md:flex-row gap-2 md:gap-4 justify-start items-center">
+                      <PlaceOutlinedIcon className="text-orange-bg" />
+                      <p>{address.address}</p>
+                    </div>
+                  )}
+                </>
+              );
+            })}
             <div className="flex w-full flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
               <LocalPhoneOutlinedIcon className="text-orange-bg" />
               <div className="flex flex-col text-center md:text-start">
