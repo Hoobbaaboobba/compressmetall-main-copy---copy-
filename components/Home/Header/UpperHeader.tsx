@@ -23,8 +23,6 @@ const UpperHeader = () => {
     document.body.style.overflowY = "hidden";
   };
 
-  const { link } = useLocationModal();
-
   return (
     <div className="hidden xl:flex justify-center bg-white items-center w-full text-white py-3">
       <div className="flex justify-between items-center max-w-[1300px] w-full">
