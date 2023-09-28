@@ -56,19 +56,12 @@ export default async function MetalPage({ params }: Props) {
 
   const pageCategory = decodeURI(params.id[0]);
   const pageLabel = decodeURI(params.id[1]);
-<<<<<<< HEAD
-=======
   const pageTitle = decodeURI(params.id[2]);
->>>>>>> 7b47037 (commt)
 
   return (
     <main className="mt-8 w-full">
       <Suspense fallback={<Loading />}>
-<<<<<<< HEAD
-        <DynamicPage category={pageCategory} id={pageLabel} />
-=======
         <DynamicPage category={pageCategory} id={pageLabel} title={pageTitle} />
->>>>>>> 7b47037 (commt)
       </Suspense>
     </main>
   );
