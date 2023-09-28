@@ -5,16 +5,7 @@ import Link from "next/link";
 
 const Logo = () => {
   const { link } = useLocationModal();
-<<<<<<< HEAD
-  const { onCloseCatalog, onCloseMenu } = useCatalogModal();
-
-  const closeMenu = () => {
-    onCloseCatalog(), onCloseMenu();
-  };
-  return (
-    <Link href={`/${link}`} onClick={closeMenu}>
-=======
-  const { onCloseCatalog, onCloseMenu, changeTypeOfMenu } = useCatalogModal();
+  const { changeTypeOfMenu, onCloseCatalog, onCloseMenu } = useCatalogModal();
 
   const onClickLink = () => {
     changeTypeOfMenu("");
@@ -24,7 +15,6 @@ const Logo = () => {
   };
   return (
     <Link href={`/${link}`} onClick={onClickLink}>
->>>>>>> 7b47037 (commt)
       <Image src="/logo.png" alt="logo" width={135} height={68} priority />
     </Link>
   );
