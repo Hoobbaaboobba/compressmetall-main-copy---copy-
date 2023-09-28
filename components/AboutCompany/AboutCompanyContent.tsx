@@ -8,18 +8,11 @@ const AboutCompanyContent = () => {
       </h1>
       <div className="flex flex-col lg:flex-row gap-4">
         <Image
-<<<<<<< HEAD
-          src="/aboutComponyPhoto.png"
-          alt="about_company_image"
-          height={500}
-          width={600}
-=======
           src={require(`../../public/aboutComponyPhoto.png`)}
           alt="about_company_image"
           width={600}
           height={520}
           placeholder="blur"
->>>>>>> 7b47037 (commt)
         />
         <div className="flex flex-col gap-2">
           Добро пожаловать в мир «Компресс металл» - вашего идеального партнера
