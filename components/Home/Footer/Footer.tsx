@@ -78,12 +78,22 @@ const Footer = () => {
         <div className="flex flex-col gap-2 max-w-[200px] w-full text-center md:text-start">
           <h3 className="font-bold text-xl">Компания</h3>
           <ul className="flex flex-col gap-1">
+<<<<<<< HEAD
             {company.map((link, index) => (
+=======
+            {company.map((href, index) => (
+>>>>>>> 7b47037 (commt)
               <li
                 key={index}
                 className="opacity-70 hover:opacity-90 transition"
               >
+<<<<<<< HEAD
                 <Link href={link.href}>{link.label}</Link>
+=======
+                <Link href={`/${pathname[1] || "moscow"}${href.href}`}>
+                  {href.label}
+                </Link>
+>>>>>>> 7b47037 (commt)
               </li>
             ))}
           </ul>
@@ -91,12 +101,24 @@ const Footer = () => {
         <div className="flex flex-col gap-2  max-w-[200px] w-full text-center md:text-start">
           <h3 className="font-bold text-xl">Каталог</h3>
           <ul className="flex flex-col gap-1">
+<<<<<<< HEAD
             {catalog.map((link, index) => (
+=======
+            {catalog.map((href, index) => (
+>>>>>>> 7b47037 (commt)
               <li
                 key={index}
                 className="opacity-70 hover:opacity-90 transition"
               >
+<<<<<<< HEAD
                 <Link href={`${link.href}${link.label}`}>{link.label}</Link>
+=======
+                <Link
+                  href={`/${pathname[1] || "moscow"}${href.href}${href.label}`}
+                >
+                  {href.label}
+                </Link>
+>>>>>>> 7b47037 (commt)
               </li>
             ))}
           </ul>
@@ -104,12 +126,22 @@ const Footer = () => {
         <div className="flex flex-col gap-2 max-w-[200px] w-full text-center md:text-start">
           <h3 className="font-bold text-xl">Услуги</h3>
           <ul className="flex flex-col gap-1">
+<<<<<<< HEAD
             {services.map((link, index) => (
+=======
+            {services.map((href, index) => (
+>>>>>>> 7b47037 (commt)
               <li
                 key={index}
                 className="opacity-70 hover:opacity-90 transition"
               >
+<<<<<<< HEAD
                 <Link href={`${link.href}`}>{link.label}</Link>
+=======
+                <Link href={`/${pathname[1] || "moscow"}${href.href}`}>
+                  {href.label}
+                </Link>
+>>>>>>> 7b47037 (commt)
               </li>
             ))}
           </ul>
@@ -131,18 +163,35 @@ const Footer = () => {
                 </>
               );
             })}
+<<<<<<< HEAD
             <div className="flex w-full flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
               <LocalPhoneOutlinedIcon className="text-orange-bg" />
               <div className="flex flex-col text-center md:text-start">
                 <p className="font-bold">+7 (495) 116 66 86</p>
+=======
+            {pathname[1] === "" && (
+              <div className="flex w-full flex-col text-center md:text-start md:flex-row gap-2 md:gap-4 justify-start items-center">
+                <PlaceOutlinedIcon className="text-orange-bg" />
+                <p>2-я Энтузиастов ул., 5 корпус 40, Москва, 111024</p>
+              </div>
+            )}
+            <div className="flex w-full flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
+              <LocalPhoneOutlinedIcon className="text-orange-bg" />
+              <div className="flex flex-col text-center md:text-start">
+                <p className="font-bold">+7 (495) 116-66-86</p>
+>>>>>>> 7b47037 (commt)
                 <p className="opacity-70">Пн. – Пт.: с 9:00 до 18:00</p>
               </div>
             </div>
             <div className="flex w-full text-start md:text-start flex-col md:flex-row gap-2 md:gap-4 justify-start items-center">
               <EmailOutlinedIcon className="text-orange-bg" />
+<<<<<<< HEAD
               <Link href="/email" className="font-bold ">
                 info@kometal.ru
               </Link>
+=======
+              <p className="font-bold ">info@kometal.ru</p>
+>>>>>>> 7b47037 (commt)
             </div>
           </div>
         </div>

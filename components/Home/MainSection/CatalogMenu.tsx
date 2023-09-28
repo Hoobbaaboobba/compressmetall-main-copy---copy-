@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+<<<<<<< HEAD
 
 import {
   blackMetal,
@@ -96,11 +97,24 @@ const CatalogMenu = () => {
   ];
 
   const { link } = useLocationModal();
+=======
+import HoverMenuItem from "./hoverMenuItem";
+
+import { usePathname } from "next/navigation";
+import { metalArray } from "./data";
+
+const CatalogMenu = () => {
+  const pathname = usePathname().split("/");
+>>>>>>> 7b47037 (commt)
 
   return (
     <div className="flex-col relative hidden xl:flex z-30">
       <div className="sticky top-[137px] overflow-y-auto h-[81vh] mt-2 bg-">
+<<<<<<< HEAD
         <Link href="/catalog?q=Все товары">
+=======
+        <Link href={`/${pathname[1] || "moscow"}/catalog?q=Все товары`}>
+>>>>>>> 7b47037 (commt)
           <div className="flex justify-center items-center">
             <div className="w-[80px] h-[80px] bg-light-gray font-bold flex justify-center items-center text-orange-bg text-lg">
               А-Я
@@ -111,6 +125,7 @@ const CatalogMenu = () => {
           </div>
         </Link>
         <hr />
+<<<<<<< HEAD
         {items.map((item, index) => (
           <>
             <HoverMenuItem
@@ -122,6 +137,15 @@ const CatalogMenu = () => {
               bold={item.bold}
               items={item.items}
               link={link}
+=======
+        {metalArray.map((metal, index) => (
+          <>
+            <HoverMenuItem
+              key={index}
+              label={metal.label}
+              buttonImg={metal.img}
+              item={metal.items}
+>>>>>>> 7b47037 (commt)
             />
             <hr />
           </>

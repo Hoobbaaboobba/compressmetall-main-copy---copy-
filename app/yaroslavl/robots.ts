@@ -7,6 +7,10 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
+<<<<<<< HEAD
     sitemap: "https://www.kometal.ru/sitemap.xml",
+=======
+    sitemap: "https://www.kometal.ru/yaroslavl/sitemap.xml",
+>>>>>>> 7b47037 (commt)
   };
 }

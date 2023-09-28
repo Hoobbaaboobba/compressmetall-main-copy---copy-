@@ -1,8 +1,13 @@
 "use client";
 
+<<<<<<< HEAD
 import { posts } from "@/posts";
 import Image from "next/image";
 import Link from "next/link";
+=======
+import SearchContent from "@/components/Search/SearchContent";
+import { posts } from "@/posts";
+>>>>>>> 7b47037 (commt)
 import { useSearchParams } from "next/navigation";
 
 const SearchPage = () => {
@@ -25,6 +30,7 @@ const SearchPage = () => {
   //   );
   // }
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-col pt-8 gap-4">
       <h2 className="text-2xl text-center lg:text-start">
@@ -64,6 +70,9 @@ const SearchPage = () => {
       <hr className="mt-8" />
     </div>
   );
+=======
+  return <SearchContent query={query || ""} currentPosts={currentPosts} />;
+>>>>>>> 7b47037 (commt)
 };
 
 export default SearchPage;

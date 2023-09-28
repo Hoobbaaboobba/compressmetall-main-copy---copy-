@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useSearchParams } from "next/navigation";
@@ -91,4 +92,10 @@ export default function Catalog() {
       </div>
     </main>
   );
+=======
+import CatalogSelectorPage from "@/components/Catalog/CatalogSelectorPage";
+
+export default function Catalog() {
+  return <CatalogSelectorPage />;
+>>>>>>> 7b47037 (commt)
 }

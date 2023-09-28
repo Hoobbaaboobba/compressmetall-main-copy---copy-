@@ -58,10 +58,18 @@ const OurContacts = () => {
             </div>
           </div>
           <Image
+<<<<<<< HEAD
             src="/mapImage.png"
             alt={"карта завода компресс металл"}
             width={690}
             height={320}
+=======
+            src={require("../../../public/mapImage.png")}
+            alt={"карта завода компресс металл"}
+            width={690}
+            height={308}
+            placeholder="blur"
+>>>>>>> 7b47037 (commt)
           />
           {/* <YMaps>
           <Map

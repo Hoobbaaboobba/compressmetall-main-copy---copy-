@@ -5,7 +5,11 @@ import { Suspense } from "react";
 import Loading from "./loading";
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Копресс металл | Донетск",
+=======
+  title: "Копресс металл",
+>>>>>>> 7b47037 (commt)
   description: "Продажа металлопроката в по всей территории России и СНГ",
   generator: "Компресс металл",
   applicationName: "Компресс металл",
@@ -45,7 +49,11 @@ export const metadata: Metadata = {
     "металлические отходы",
     "металлоконструкции",
     "металлоремонт",
+<<<<<<< HEAD
     "Донетск",
+=======
+    "Москва",
+>>>>>>> 7b47037 (commt)
   ],
   creator: "Reptile Design",
   publisher: "Reptile Design",

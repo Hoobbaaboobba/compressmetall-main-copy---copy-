@@ -12,11 +12,15 @@ import {
 
 import OurContacts from "./Home/OurContacts/OurContacts";
 import useCatalogModal from "@/hooks/useCatalogModal";
+<<<<<<< HEAD
 import useLocationModal from "@/hooks/useLocationModal";
+=======
+>>>>>>> 7b47037 (commt)
 import OrangeButton from "./OrangeButton";
 import usePriceModal from "@/hooks/usePriceModal";
 import Link from "next/link";
 import useRequestModal from "@/hooks/useRequestModal";
+<<<<<<< HEAD
 
 const items = [
   {
@@ -86,6 +90,23 @@ const ViewCatalog = () => {
     useCatalogModal();
 
   const { link } = useLocationModal();
+=======
+import { usePathname } from "next/navigation";
+import { metalArray } from "./Home/MainSection/data";
+
+import Image from "next/image";
+
+const ViewCatalog = () => {
+  const {
+    isOpenCatalog,
+    onCloseCatalog,
+    typeOfMenu,
+    changeTypeOfMenu,
+    onCloseMenu,
+  } = useCatalogModal();
+
+  const pathname = usePathname().split("/");
+>>>>>>> 7b47037 (commt)
   const { onOpen } = usePriceModal();
   const { onOpen: onOpenRequest } = useRequestModal();
 
@@ -102,6 +123,10 @@ const ViewCatalog = () => {
   const onClickLink = () => {
     changeTypeOfMenu("");
     onCloseCatalog();
+<<<<<<< HEAD
+=======
+    onCloseMenu();
+>>>>>>> 7b47037 (commt)
     document.body.style.overflowY = "auto";
   };
 
@@ -111,9 +136,15 @@ const ViewCatalog = () => {
         className={`fixed ${
           isOpenCatalog ? "translate-y-0" : "translate-y-[-120%]"
         } left-0 top-
+<<<<<<< HEAD
         0 h-[100dvh] w-full bg-white z-10 flex flex-wrap justify-center overflow-y-auto items-start p-5 pb-[160px] sm:px-8 transition duration-200 xl:hidden gap-1`}
       >
         {items.map((card, index) => (
+=======
+        0 h-[100dvh] w-full bg-white z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-y-auto p-5 pb-[160px] sm:px-8 transition duration-200 xl:hidden gap-1`}
+      >
+        {metalArray.map((card, index) => (
+>>>>>>> 7b47037 (commt)
           <>
             <div key={index} onClick={() => changeTypeOfMenu(card.label)}>
               <CatalogItem src={card.img} label={card.label} bold="" />
@@ -125,6 +156,7 @@ const ViewCatalog = () => {
                   : "translate-y-[-120%]"
               } fixed z-50 p-4 pb-[150px] lg:pb-12 border w-full h-full overflow-x-hidden overflow-y-auto transition duration-200`}
             >
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-y-2 justify-center items-center sm:justify-between border-b border-b-black pb-4">
                 <h1 className="font-bold text-3xl uppercase">{card.label}</h1>
                 <div onClick={showPrice}>
@@ -186,6 +218,36 @@ const ViewCatalog = () => {
                   <OurContacts />
                 </div>
               )}
+=======
+              <div className="flex flex-col justify-center items-center text-center gap-2">
+                <h1 className="text-3xl font-bold uppercase">{card.label}</h1>
+                <div onClick={showPrice}>
+                  <OrangeButton label={"Уточнить размер или цены"} />
+                </div>
+              </div>
+              <hr className="w-full my-4" />
+              <div
+                className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 `}
+              >
+                {card.items.map((metal) => (
+                  <Link
+                    onClick={onClickLink}
+                    href={`/${pathname[1] || "moscow"}/catalog?q=${encodeURI(
+                      metal.name
+                    )}`}
+                    className="hover:shadow-md"
+                  >
+                    <Image
+                      src={require(`../public/${metal.img}.png`)}
+                      alt={card.label}
+                      width={240}
+                      height={280}
+                      placeholder="blur"
+                    />
+                  </Link>
+                ))}
+              </div>
+>>>>>>> 7b47037 (commt)
             </div>
           </>
         ))}

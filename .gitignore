@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 node_modules
 .next
 out
 .gitignore
 todo_list.txt
+=======
+.next
+out
+>>>>>>> 7b47037 (commt)
