@@ -14,7 +14,7 @@ const Logo = () => {
     document.body.style.overflowY = "auto";
   };
   return (
-    <Link href={`/${link}`} onClick={onClickLink}>
+    <Link href={`/${link || "moscow"}`} onClick={onClickLink}>
       <Image src="/logo.png" alt="logo" width={135} height={68} priority />
     </Link>
   );

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import useLocationModal from "@/hooks/useLocationModal";
 import Image from "next/image";
 import Link from "next/link";
-=======
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
->>>>>>> 7b47037 (commt)
 
 interface OurMetalCardProps {
   src: string;
@@ -23,11 +17,7 @@ const OurMetalCard: React.FC<OurMetalCardProps> = ({
   isInStock,
   amount,
 }) => {
-<<<<<<< HEAD
   const { link } = useLocationModal();
-=======
-  const pathname = usePathname().split("/");
->>>>>>> 7b47037 (commt)
 
   return (
     <div className="border border-light-gray h-full max-h-[280px] rounded-xl flex flex-col justify-between items-center text-center gap-2 p-[20px] transitionr">
@@ -42,19 +32,11 @@ const OurMetalCard: React.FC<OurMetalCardProps> = ({
         <h2 className="text-sm ">{description}</h2>
       </div>
       <Link
-<<<<<<< HEAD
-        href={`/${link}/catalog/${encodeURI(name)}/${encodeURI(
+        href={`/${link || "moscow"}/catalog/${encodeURI(name)}/${encodeURI(
           description
         )}?i=${encodeURI(src)}&q=${encodeURI(isInStock)}&amount=${encodeURI(
           amount
         )}`}
-=======
-        href={`/${pathname[1] || "moscow"}/catalog/${encodeURI(
-          name
-        )}/${encodeURI(description)}?i=${encodeURI(src)}&q=${encodeURI(
-          isInStock
-        )}&amount=${encodeURI(amount)}`}
->>>>>>> 7b47037 (commt)
       >
         <button className="py-2 px-6 boxshadow bg-orange-bg mt-4 underline text-white">
           Подробнее
