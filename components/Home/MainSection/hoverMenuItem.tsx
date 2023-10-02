@@ -52,14 +52,7 @@ const HoverMenuItem: React.FC<ProductsProps> = ({ label, buttonImg, item }) => {
         onMouseLeave={() => setHover(false)}
       >
         <Link
-          href={
-            label === "Покраска" ||
-            "Размотка арматуры" ||
-            "Остатки" ||
-            "Резка металла в размер"
-              ? `/${pathname[1]}/services`
-              : `/${pathname[1]}/catalog?q=${encodeURI(label)}`
-          }
+          href={`/${pathname[1]}/catalog?q=${encodeURI(label)}`}
           onClick={() => setHover(false)}
         >
           <CatalogItem src={buttonImg} label={label} bold="" />
@@ -180,7 +173,7 @@ const HoverMenuItem: React.FC<ProductsProps> = ({ label, buttonImg, item }) => {
                     <li className="dot">Невостребованный металлопрокат;</li>
                     <li className="dot">Неликвиды металла.</li>
                   </ul>
-                  <p>
+                  <p className="mt-3">
                     Возможен самовывоз или доставка.Цены ниже рыночных.По каждой
                     позиции можно получить консультацию менеджера и оформить
                     заказ в любой удобной вам форме:
