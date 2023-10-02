@@ -7,7 +7,6 @@ export const ids = [
         thirdlink.items.map((forthlink) => {
           var id = new Object();
           id = new Array(secondLink.name, thirdlink.variant, forthlink.title);
-          console.log(id);
         })
       )
     )
