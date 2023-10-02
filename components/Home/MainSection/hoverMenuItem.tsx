@@ -52,7 +52,14 @@ const HoverMenuItem: React.FC<ProductsProps> = ({ label, buttonImg, item }) => {
         onMouseLeave={() => setHover(false)}
       >
         <Link
-          href={`/${pathname[1]}/catalog?q=${encodeURI(label)}`}
+          href={
+            label === "Покраска" ||
+            "Размотка арматуры" ||
+            "Остатки" ||
+            "Резка металла в размер"
+              ? `/${pathname[1]}/services`
+              : `/${pathname[1]}/catalog?q=${encodeURI(label)}`
+          }
           onClick={() => setHover(false)}
         >
           <CatalogItem src={buttonImg} label={label} bold="" />
