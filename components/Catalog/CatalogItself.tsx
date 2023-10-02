@@ -45,9 +45,17 @@ const CatalogItself = ({ data, label }: CatalogItselfProps) => {
                     />
                     <h2 className="opacity-70">{card.name}</h2>
                     <h1>{link.variant}</h1>
-                    <Link href={`/${pathname[1]}/catalog?q=${link.variant}`}>
-                      <OrangeButton label={"Выбрать марку"} mark />
-                    </Link>
+                    {link.items.length === 0 ? (
+                      <Link
+                        href={`/${pathname[1]}/catalog/${card.name}/${link.variant}/?i=${link.img}&q=Имеется в наличии&amount=400`}
+                      >
+                        <OrangeButton label={"Приобрести"} mark />
+                      </Link>
+                    ) : (
+                      <Link href={`/${pathname[1]}/catalog?q=${link.variant}`}>
+                        <OrangeButton label={"Выбрать марку"} mark />
+                      </Link>
+                    )}
                   </div>
                 )}
                 {label === link.variant &&

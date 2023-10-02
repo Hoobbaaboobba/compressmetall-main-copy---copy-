@@ -61,7 +61,11 @@ export default async function MetalPage({ params }: Props) {
   return (
     <main className="mt-8 w-full">
       <Suspense fallback={<Loading />}>
-        <DynamicPage category={pageCategory} id={pageLabel} title={pageTitle} />
+        <DynamicPage
+          category={pageCategory}
+          id={pageLabel}
+          title={pageTitle === "undefined" ? "" : pageTitle}
+        />
       </Suspense>
     </main>
   );

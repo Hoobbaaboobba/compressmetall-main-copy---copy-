@@ -112,3 +112,19 @@ body {
     box-shadow: none;
   }
 }
+
+.dot {
+  position: relative;
+  width: 50%;
+}
+
+.dot::before {
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: -14px;
+  height: 6px;
+  width: 6px;
+  background: #000;
+  border-radius: 100%;
+}

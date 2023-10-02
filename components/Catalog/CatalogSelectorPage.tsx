@@ -52,7 +52,7 @@ const CatalogSelectorPage = () => {
     <main className="flex justify-center">
       <div className="max-w-[1000px] w-full flex flex-col py-8 px-4">
         <div className="w-full relative">
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-start items-center">
             <div
               onClick={() => router.back()}
               className="rounded-full text-white bg-orange-bg cursor-pointer"
